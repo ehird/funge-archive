@@ -1,0 +1,44 @@
+v      v <
+>y2b*k$>#^_044p>:#v_n44g#v_v
+    v     p0+ag 44<        >0a".eman elif ytpmenon deeN"   v
+v   >44g1+44p  ^         >
+                                                   @_,#! #:<
+                                   >0a".elif nepo t'ndluoC"^
+                   v        \ <
+>36*:1+y1+\y1+0044g>1-::a+0g\#^_\$#^i33p23p31p21pv
+v                            p32+g12g32p33+g13g33<
+
+         >0a".PXIF deeN">:#,_@  v     v  
+>"PXIF"4#^(>n2y8*2-2\R1-:+1+:D#v?>\D#v?> 01p:11p 31g+12p 01g21g+02pv
+                               0^-   0^- x1b,y1b = 01,11 targetPt
+v                              >\^   >\^ x2b,y2b = 02,12 +targetSz >
+                                         x1a,y1a = 0
+ Overlap check...                        x2a,y2a = 23,33 thisSz + targetSz
+            Swap if wrong order
+>01g02g`#v_          >11g12g`#v_v
+         >02g01g02p01^        >  p12g11g12p11pv
+v)4"FIXP"                 <     >  v          <
+                      x1d_^#`0  g20<  OK if x1a  east of x2b
+                      x1d_^#`g10g32<  OK if x1b  east of x2a
+                      x1d_^#`0  g21<  OK if y1a south of y2b
+           ^             _^#`g11g33<  OK if y1b south of y2a
+                                 Avoid wraparound here...
+>01g11g0044g>1-::a+0g\#v_\$#vi3k$                          v
+v;          ^        \ <    >0a".elif nepo t'ndluoC">:#,_@;<
+
+  Begin magic
+
+>01g11g01g11g0{2u0}  v      Set offset to x1b,y1b
+v  p:-10-\0p:-20-\0  <      Save the new x1a,y1a at -1,-1 and -2,-2
+>">kp"01-0p02-0p03-0pv      Write ">kp" to -3,0 through -1,0
+v  p:-40g:-2p:-30g:-1<      Temp copies of x1a,y1a to -3,-3 and -4,-4
+>5-:  v                     Zero -5,-5
+ Set up the bomb for this file's area
+v     <                                        p:-30+1g:-30<
+>' 03-:g04-:g 05-:g1+05-:p 03-:g01-:g- 01-:g2+02-:g3+g-!#v_^
+^_v#!`  g+3g:-20+3g:-10 -g:-20 p:-40:+1g:-40 p:-30g:-10  <
+v <
+ Bomb the few negative places as well
+>' 05-:' 04-:' 03-:' 02-:' 01-:' 03-0' 02-0' 01-0v  Target: -3,0
+x ;JUMP;            -+*3eg:-200 -+3g:-100 +8g:-50<  Source: -ox,43-oy
+                                                    Delta:  ox-3,oy-42
